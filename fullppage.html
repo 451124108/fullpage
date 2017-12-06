@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="jquery.fullPage.css">
+    <script src="jquery-3.2.1.js"></script>
+    <script src="jquery.fullPage.js"></script>
+    <link rel="stylesheet" href="fullpage.css">
+</head>
+<body>
+<div id="dowebok">
+    <div class="section section1">
+        <div class="bg41"></div>
+        <div class="bg42"></div>
+        <div class="bg43"></div>
+        <h2 class="text1">[ 动态情景皮肤 ]</h2>
+        <h1 class="text2">美轮美奂，百变尽随你心</h1>
+        <p class="textp">
+            国内首创动态情景皮肤，可以随着早晚时光，季节主题的变幻而自动切换，实现了在邮箱里也能感受天气和心情的变化，带来完全不同的页面体验并且呈现最佳视觉感受，还特别针对原有邮箱皮肤的对比度和色彩进行了微调，减少视觉疲劳感。
+        </p>
+        <div class="jiantou"> >> </div>
+    </div>
+    <div class="section section2">
+        <div class="slide"><a href="javascript:;"></a></div>
+        <div class="slide"><a href="javascript:;"></a></div>
+        <div class="slide"><a href="javascript:;"></a></div>
+    </div>
+    <div class="section section3"></div>
+    <div class="section section4"></div>
+</div>
+</body>
+</html>
+<script>
+    $(function () {
+        $('#dowebok').fullpage({
+            'navigation': true,
+            'navigationTooltips': ['第一页', '第二页', '第三页', '第四页'],
+        });
+        setInterval(function(){
+            $.fn.fullpage.moveSlideRight();
+        }, 2000);
+        $('.jiantou').click(function () {
+            $.fn.fullpage.moveSectionDown();
+        })
+    });
+</script>
